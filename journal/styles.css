@@ -1,0 +1,86 @@
+/* Basic, readable journal styling (kept intentionally simple) */
+
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --text: #f2f3f5;
+  --muted: #b8beca;
+  --link: #8ab4ff;
+  --border: #2a2f3a;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif 4", serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  padding: 2rem 1rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.tagline {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+.wrap {
+  max-width: 45rem; /* keeps line length readable */
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.sketch,
+.entry {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.entry-header h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.entry-content p {
+  margin: 0.9rem 0;
+}
+
+.entry-content h3 {
+  margin: 1.25rem 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

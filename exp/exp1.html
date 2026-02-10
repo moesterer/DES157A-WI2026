@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 1</title>
+</head>
+
+<body>
+
+<h1>Experiment 1</h1>
+<h2>Open the console to see the program work</h2>
+
+<script>
+
+/*
+I attempted the first prompt, the program takes a fully lowercase sentence and then capitalizes
+the first letter of each word.
+*/
+
+
+// sequence:
+// the lower case sentance created as a string
+let sentence = "cats and dogs are both very cute animals."; 
+
+// splitting the sentence into an array of the words
+let words = sentence.split(" ");
+
+// creating the empty string that will hold the capitalized result
+let result = ""; 
+
+
+// Loop:
+// will go through each word in the array
+for (let i = 0; i < words.length; i++) {
+
+    let word = words[i]; 
+
+    // selection:
+    // check that the word is not empty, so the length is greater than 0
+    if (word.length > 0) {
+
+        // capitalize first letter (index 0), add rest of word
+        let capitalized =
+            word.charAt(0).toUpperCase().concat(word.slice(1));
+
+        result = result.concat(capitalized, " ");
+    } 
+}
+
+
+console.log("Original sentence:");
+console.log(sentence);
+
+console.log("Capitalized sentence:");
+console.log(result.trim());
+
+
+</script>
+
+</body>
+
+</html>
+
+
+
+
