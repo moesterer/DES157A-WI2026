@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Experiment 2</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    text-align: center;
+    padding-top: 100px;
+    transition: background-color .5s;
+}
+
+#message{
+    font-size: 1.5em;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>The Color Experiment</h1>
+<p id="message"></p>
+
+
+<script>
+
+/*
+This program will ask the user to choose their favorite color from a list of availible colors.
+It then checks if the color is valid (on the array of availible colors), changes the page background to that color,
+and displays a personalized message on the page.
+*/
+
+
+// Array of allowed colors
+var colors = ["red", "blue", "green", "purple", "pink", "yellow", "orange"];
+
+
+// gets user input
+function getColor(){
+
+    var userColor = prompt("Choose your favorite color:\nred, blue, green, purple, pink, yellow, or orange");
+
+    return userColor;
+} 
+
+
+// validates the color
+function validateColor(color){
+    for(var i = 0; i < colors.length; i++){
+
+        if(color === colors[i]){
+            return true;
+        }
+
+    } 
+
+    return false;
+}
+
+
+
+// FUNCTION 3
+// Changes background and displays message
+function applyColor(color){
+
+    document.body.style.backgroundColor = color;
+
+    var message = document.querySelector("#message");
+
+    message.innerHTML = "You picked " + color ;
+
+}
+
+
+
+var selectedColor = getColor();
+
+if(validateColor(selectedColor)){
+
+    applyColor(selectedColor);
+
+}else{ 
+
+    document.querySelector("#message").innerHTML =
+    "That color was not an option. Refresh to try again.";
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
