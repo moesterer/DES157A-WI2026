@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Mad Libs</title>
+
+        <!-- Normalize -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Your CSS -->
+        <link rel="stylesheet" href="styles.css" />
+
+        <script src="script.js" defer></script>
+
+    </head>
+
+    <body>
+        <header>
+
+            <h1>Gravewood Mad Libs</h1>
+            <p>Fill in the blanks. Unleash the tale.</p>
+        </header>
+
+        <main>
+            <section aria-labelledby="wordsTitle">
+
+                <h2 id="wordsTitle">Words of Power</h2>
+
+                <form>
+                    
+                      
+                        <ul>
+                            <li>
+                                <label for="adj1">Adjective</label>
+                                <input id="adj1" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="adj2">Adjective</label>
+                                <input id="adj2" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="nounPlural">Noun (plural)</label>
+                                <input id="nounPlural" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="noun1">Noun</label>
+                                <input id="noun1" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="adj3">Adjective</label>
+                                <input id="adj3" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="verbPast1">Verb (past tense)</label>
+                                <input id="verbPast1" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="adverb1">Adverb</label>
+                                <input id="adverb1" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="verb1">Verb</label>
+                                <input id="verb1" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="noun2">Noun</label>
+                                <input id="noun2" type="text" required />
+                            </li>
+
+                            <li>
+                                <label for="verbPast2">Verb (past tense)</label>
+                                <input id="verbPast2" type="text" required />
+                            </li>
+                        </ul>
+                    
+
+                    <p class="actions">
+                        <input type="submit" value="Tell My Story" />
+                        <button type="reset">Reset</button>
+                    </p>
+
+                </form>
+            </section>
+
+
+            <section aria-labelledby="storyTitle">
+                <h2 id="storyTitle">Your Dark Tale</h2>
+                <p class="output-hint">
+                    Your story will appear here after you submit your words.
+                </p>
+            </section>
+        </main>
+
+
+        <footer>
+            <p>Madeleine Oesterer | DES 157A | Mad Libs</p>
+        </footer>
+    </body>
+</html>
