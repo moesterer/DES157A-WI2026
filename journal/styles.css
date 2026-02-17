@@ -1,3 +1,4 @@
+/* Basic, readable journal styling (kept intentionally simple) */
 
 :root {
   --bg: #0f1115;
@@ -32,7 +33,7 @@ body {
 }
 
 .wrap {
-  max-width: 45rem;
+  max-width: 45rem; /* keeps line length readable */
   margin: 0 auto;
   padding: 1.5rem 1rem 2rem;
 }
