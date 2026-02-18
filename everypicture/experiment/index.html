@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>In-Between</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div id="frame">
+    <header>
+      <h1>In-Between</h1>
+    </header>
+
+    <main id="layout">
+      
+
+      <aside id="timeline" aria-label="Timeline thumbnails">
+        <button class="thumb active" data-index="0">
+          <img src="images/baby.jpg" alt="baby thumbnail">
+        </button>
+
+        <button class="thumb" data-index="1">
+          <img src="images/school.jpg" alt="school thumbnail">
+        </button>
+
+        <button class="thumb" data-index="2">
+          <img src="images/written.jpg" alt="written thumbnail">
+        </button>
+
+        <button class="thumb" data-index="3">
+          <img src="images/order.jpg" alt="order thumbnail">
+        </button>
+
+        <button class="thumb" data-index="4">
+          <img src="images/costume.jpg" alt="costume thumbnail">
+        </button>
+
+      </aside>
+
+      
+      <section id="stage" aria-label="Main image stage">
+        <div id="content" aria-label="Image container">
+          <img id="baseSlide" src="images/baby.jpg" alt="Main slide">
+
+          
+
+          <div id="schoolHotspots" aria-hidden="true"></div>
+          <div id="orderHotspots" aria-hidden="true"></div>
+          <div id="popup" aria-live="polite"></div>
+        </div>
+
+        <div id="caption">
+          <p id="capText"></p>
+        </div>
+
+        <div id="controls">
+          <button id="previous" aria-label="Previous image">‹</button>
+          <button id="next" aria-label="Next image">›</button>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
