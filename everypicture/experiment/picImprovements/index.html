@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multitasking Is Not Real</title>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- moving background text -->
+    <div class="bg-marquee" aria-hidden="true">
+        <div class="bg-row bg-row--a">
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+        </div>
+        <div class="bg-row bg-row--b">
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+        </div>
+        <div class="bg-row bg-row--c">
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+            <span>MULTITASKING IS NOT REAL</span>
+        </div>
+    </div>
+
+    <!-- single main landmark -->
+    <main>
+
+        <!-- intro screen -->
+        <section id="introScreen" class="screen screen--active">
+            <button id="goBtn" class="go-btn" type="button">GO</button>
+        </section>
+
+        <!-- main screen -->
+        <section id="mainScreen" class="screen">
+
+            <!-- notification -->
+            <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+                <div id="toastText" class="toast__text">Notification</div>
+            </div>
+
+            <section class="stage">
+                <div class="content">
+
+                    <div class="image-wrap">
+                        <!-- SVG overlay clicking zones -->
+                        <div id="hitmapLayer" class="hitmap-layer">
+                            <svg viewBox="0 0 4004 2647" xmlns="http://www.w3.org/2000/svg">
+                                <g class = "hit-group">
+                                    <path class="hit-area" data-state="show"
+                                        d="M1869.5 1321L481.5 1526.5L502 1054.5L360.5 199L1597 155L1654 920L1869.5 1321Z" />
+                                    <path class="hit-area" data-state="work"
+                                        d="M491.5 1543H16.5L192 2540.5L502 2486.5L1014 2449.5L1233 2466.5L1320.5 2500L2193 2102.5L1627 1432L879 1634L491.5 1543Z" />
+                                    <path class="hit-area" data-state="text"
+                                        d="M2833 1635L2733.5 2096L2380 1991.5L2529.5 1550.5L2833 1635Z" />
+                                    <path class="hit-area" data-state="snack"
+                                        d="M3625 1427.5L3580.5 1763L3522 1746.5H3409.5L3215 1645L3026 1539L3039 1512.5L3016 1492.5L3075.5 1233.5L3090.5 1149L3062.5 1041L3090.5 860L3867.5 1085.5L3754.5 1308L3638.5 1388L3625 1427.5Z" />
+                                    <path class="hit-area" data-state="drink"
+                                        d="M2909 1354L3036.5 1347L3074.5 1153L3050.5 1029.5L3074.5 841L3192 869L3203 733L3192 606L3215.5 513.5L3235 439.5L3225.5 386.5L3159.5 365.5H3092.5L3050.5 386.5L3028 513.5L3014 576.5L2909 754L2808.5 1255L2909 1354Z" />
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- crossfade -->
+                        <img id="imgA" class="scene-img scene-img--active" src="images/main.jpg" alt="Main scene" />
+                        <img id="imgB" class="scene-img" src="images/main.jpg" alt="" />
+                    </div>
+
+                    <!-- bottom text -->
+                    <div class="bottom-box">
+                        <p id="mainText" class="bottom-box__text">
+                            I've got a lot to get done today.
+                            What should I get started with? I need to get some work done.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
