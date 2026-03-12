@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magical Girl Battle</title>
+
+  <!-- Jomhuria -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+
+  <!-- Meow Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  
+  <div class="bkg">
+    <div class="bkg-layer bkg-a" aria-hidden="true"></div>
+    <div class="bkg-layer bkg-b" aria-hidden="true"></div>
+  </div>
+
+  <main class="app">
+
+    <!-- intro -->
+    <section class="screen screen--active" data-screen="intro" aria-label="Intro screen">
+      <div class="intro-wrap">
+        <h1 class="title">Magical Girl</h1>
+        <div class="subtitle meow-script-regular">battle</div>
+
+        <button class="btn btn--primary js-play" type="button">PLAY</button>
+      </div>
+    </section>
+
+    <!-- battle -->
+    <section class="screen" data-screen="battle" aria-label="Battle screen">
+      <div class="battle">
+
+        <div class="battle-half battle-half--left">
+          <div class="hp hp--left">
+            <span class="hp-label">HP</span>
+            <span class="hp-value js-hp-p1">30</span>
+          </div>
+
+          <img 
+            class="fighter fighter--p1"
+            src="images/magicGirl.png"
+            alt="Magical Girl"
+            width="400"
+            height="800"
+          />
+        </div>
+
+        <div class="battle-half battle-half--right">
+          <div class="hp hp--right">
+            <span class="hp-label">HP</span>
+            <span class="hp-value js-hp-p2">30</span>
+          </div>
+
+          <img
+            class="fighter fighter--p2"
+            src="images/monsters.png"
+            alt="Monsters"
+            width="400"
+            height="800"
+          />
+        </div>
+
+        <!-- choice card -->
+        <div class="center-ui">
+
+          <div class="turn-card js-turn-card" data-turn="p1">
+            <button class="choice-btn js-choice" data-action="attack" type="button">Attack</button>
+            <button class="choice-btn js-choice" data-action="heal" type="button">Heal</button>
+          </div>
+
+          <button class="dice-btn js-dice" aria-label="Roll dice" type="button">
+            <img
+              class="dice-img js-dice-img"
+              src="images/pinkDice1.png"
+              alt="Dice"
+              width="400"
+              height="400"
+            />
+          </button>
+
+          <div class="hint js-hint">Choose an action.</div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- victory -->
+    <section class="screen" data-screen="victory" aria-label="Victory screen">
+      <div class="victory-wrap">
+
+        <h2 class="victory-title js-victory-title">Victory!</h2>
+
+        <button class="btn btn--primary js-again" type="button">PLAY AGAIN</button>
+
+        <img
+          class="victory-fighter js-victory-fighter"
+          src="images/magicGirl.png"
+          alt="Winner"
+          width="400"
+          height="800"
+        />
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <a href="sources.html" class="sources-link">Sources</a>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
